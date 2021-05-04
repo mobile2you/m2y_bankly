@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cdt_baas (1.5.4)
+    m2y_bankly (1.5.4)
       httparty
 
 GEM
@@ -21,7 +21,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  cdt_baas!
+  m2y_bankly!
   rake (~> 10.0)
 
 BUNDLED WITH

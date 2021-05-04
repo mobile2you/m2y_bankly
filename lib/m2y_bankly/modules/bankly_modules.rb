@@ -1,0 +1,7 @@
+require_relative 'bankly_module'
+require_relative 'auth'
+require_relative 'account'
+require_relative 'bank_slip'
+require_relative 'card'
+require_relative 'transfer'
+require_relative 'payment'
