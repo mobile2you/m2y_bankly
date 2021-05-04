@@ -21,7 +21,7 @@ module M2yBankly
     end
 
     def receipt(agency, account, authentication_code)
-      response = @request.get("#{@url}/#{PAYMENT}/#{DETAIL}?authentication_code=#{authentication_code}?branch=#{agency}&account=#{account}")
+      response = @request.get("#{@url}/#{PAYMENT}/#{DETAIL}?authentication_code=#{authentication_code}&branch=#{agency}&account=#{account}")
     end
 
 
