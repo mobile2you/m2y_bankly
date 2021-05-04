@@ -16,12 +16,12 @@ module M2yBankly
       BanklyModel.new(response)
     end
 
-    def receipts(agency, account)
-      response = @request.get("#{@url}/#{PAYMENT}?branch=#{agency}&account=#{account}")
+    def receipts(agency, account, pageSize = 10)
+      response = @request.get("#{@url}/#{PAYMENT}?bankBranch=#{agency}&bankAccount=#{account}&pageSize=#{pageSize}")
     end
 
     def receipt(agency, account, authentication_code)
-      response = @request.get("#{@url}/#{PAYMENT}/#{DETAIL}?authentication_code=#{authentication_code}&branch=#{agency}&account=#{account}")
+      response = @request.get("#{@url}/#{PAYMENT}/#{DETAIL}?authentication_code=#{authentication_code}&bankBranch=#{agency}&bankAccount=#{account}")
     end
 
 
