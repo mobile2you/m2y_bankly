@@ -17,6 +17,7 @@ module M2yBankly
 
   # Account
   CUSTOMERS = 'customers'
+  BUSINESS = 'business'
   DOCUMENT = 'document-analysis'
   ACCOUNTS = 'accounts'
   ACCOUNT = 'account'

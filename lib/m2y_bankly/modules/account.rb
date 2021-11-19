@@ -24,6 +24,12 @@ module M2yBankly
       person
     end
 
+    def get_company(document_number)
+      response = @request.get("#{@url}/#{BUSINESS}/#{document_number.gsub(/[^0-9]/, '')}?resultLevel=DETAILED")
+      person = BanklyModel.new(response)
+      person
+    end
+
     def send_document(document_number, opts)
       opts[:headers] = {
         'Accept' => 'application/json',
