@@ -22,6 +22,12 @@ module M2yBankly
       card
     end
 
+    def get_virtual_card_transactions(proxy)
+      response = @request.get("#{@url}/#{CARDS}/#{proxy}/#{TRANSACTIONS}")
+      card = BanklyModel.new(response)
+      card
+    end
+
     def get_card(proxy)
       response = @request.get("#{@url}/#{CARDS}/#{proxy}")
     end
