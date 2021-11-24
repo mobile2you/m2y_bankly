@@ -54,6 +54,10 @@ module M2yBankly
       response = @request.get("#{@url}/#{CUSTOMERS}/#{document_number.gsub(/[^0-9]/, '')}/#{ACCOUNTS}", true)
     end
 
+    def get_company_account(document_number)
+      response = @request.get("#{@url}/#{BUSINESS}/#{document_number.gsub(/[^0-9]/, '')}/#{ACCOUNTS}", true)
+    end
+
     def get_account_status(account_number)
       response = @request.get("#{@url}/#{ACCOUNTS}/#{account_number.gsub(/[^0-9]/, '')}", true)
     end
