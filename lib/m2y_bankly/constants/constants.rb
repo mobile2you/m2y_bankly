@@ -35,6 +35,7 @@ module M2yBankly
   CONTACTLESS = 'contactless'
   PASSWORD = 'password'
   STATUS = 'status'
+  TRANSACTIONS = 'transactions'
 
   # Payment
   PAYMENT = 'bill-payment'
