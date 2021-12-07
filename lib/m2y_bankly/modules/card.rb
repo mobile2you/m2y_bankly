@@ -22,8 +22,8 @@ module M2yBankly
       card
     end
 
-    def get_virtual_card_transactions(proxy)
-      response = @request.get("#{@url}/#{CARDS}/#{proxy}/#{TRANSACTIONS}")
+    def get_virtual_card_transactions(proxy, startDate, endDate, page, pageSize)
+      response = @request.get("#{@url}/#{CARDS}/#{proxy}/#{TRANSACTIONS}?startDate=#{startDate}&endDate=#{endDate}&page=#{page}&pageSize=#{pageSize}")
       card = BanklyModel.new(response)
       card
     end
