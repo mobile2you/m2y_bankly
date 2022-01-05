@@ -71,8 +71,8 @@ module M2yBankly
                               )
     end
 
-    def get_account_events(bank_agency, bank_number, beginDateTime, endDateTime, limit = 20, details = 'true')
-      response = @request.get("#{@url}/#{EVENTS}?branch=#{bank_agency}&account=#{bank_number}&endDateTime=#{endDateTime}&beginDateTime=#{beginDateTime}&pageSize=#{limit}&includeDetails=#{details}"
+    def get_account_events(bank_agency, bank_number, beginDateTime, endDateTime, limit = 20, details = 'true', page = 1)
+      response = @request.get("#{@url}/#{EVENTS}?branch=#{bank_agency}&account=#{bank_number}&endDateTime=#{endDateTime}&beginDateTime=#{beginDateTime}&pageSize=#{limit}&includeDetails=#{details}&page=#{page}"
                               )
     end
 
